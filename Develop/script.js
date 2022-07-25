@@ -1,11 +1,11 @@
 // Variables
 var passwordLength = 8;
-var options = "ABCDEFGHIJKLMNOPQRSTTUVWRJSKFH";
+var options = "";
 
 var symbol = "!@#$%^&*()";
 var lowerCase = "abcdeffghijklmnopqrstuvwxyz";
 var upperCase =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var number = "023456789";
+var number = "0123456789";
 
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
@@ -17,13 +17,13 @@ generateBtn.addEventListener("click", writePassword);
 function  writePassword() {
     if (passwordLength > 7 && passwordLength < 129) {
 
-      let lowerCase = prompt ("Would you like to include lowercase in your password?");
-      let upperCase = prompt ("would you like to include uppercase in your password?");
-      let numbers = prompt ("Would you like to have number in your password?");
-      let symbol = prompt ("Would you like to include smybols?");
+      //let lowerCase = prompt ("Would you like to include lowercase in your password?");
+     // let upperCase = prompt ("would you like to include uppercase in your password?");
+      //let number = prompt ("Would you like to have number in your password?");
+     // let symbol = prompt ("Would you like to include smybols?");
 
       if (lowerCase !== "yes" && upperCase !== "yes" && number !== "yes" && symbol !== "yes"); {
-        alert("Password Length must be 8 - 128 characters!");
+        //alert("Password Length must be 8 - 128 characters!");
       }
 
      if (confirm("would you like to choose numbers in you password?")) {
@@ -38,15 +38,23 @@ function  writePassword() {
         options = options.concat(upperCase);
     }
 
-      if (confirm("would you like to choose numbers in you password?")) {
-        options = options.concat(number);
+      if (confirm("would you like to choose lowercase in you password?")) {
+        options = options.concat(lowerCase);
     }
     var outcome = "";
     for (var i = 0; i <= passwordLength; i++) {
-      var randomInput = math.floor(math.random() * options.length);
+      var randomInput = Math.floor(Math.random() * options.length);
       outcome += options.substring(randomInput, randomInput +1);
     }
-    return outcome;
+    console.log(outcome)
+    
+    var passwordText = document.querySelector("#password");
+    passwordText.value = outcome;
+    
+  return outcome;
   }
+  var passwordText = document.querySelector("#password");
+  passwordText.value = outcome;
 }
+
 
