@@ -1,5 +1,9 @@
 <h1> Challenge #3 </h1>
 
+Link to deployed repo: 
+[github](https://github.com/alyesp/passwordGen)
+[gitpages](https://alyesp.github.io/passwordGen/)
+
 For this weeks challenge, we were asked to follow the acceptence criteria to generate a random password after a series of prompts and inputs.
 
 <h2> Acceptence Criteria</h2>
@@ -11,7 +15,3 @@ For this weeks challenge, we were asked to follow the acceptence criteria to gen
 <h1> Screenshot: </h1>
 
 ![my screenshot](./assets/JS/images/Screenshot2.png)
-
-
-Link to deployed repo: 
-![text](https://)
